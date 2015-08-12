@@ -33,12 +33,11 @@ $('#a-la-carte').on('click', function () {
 
 });
 
-$("p").hover(function(){
-    $(this).css("background-color", "yellow");
-    }, function(){
-    $(this).css("background-color", "pink");
-});
 
+
+// $('.checkbox label').mouseover(function(){
+//     $(this).append("test");
+// });
 
 
 });
