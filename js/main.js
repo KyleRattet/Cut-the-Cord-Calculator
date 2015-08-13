@@ -1,7 +1,7 @@
 
 
 
-$(document).on('ready', function() {
+
 
 ///////////////////////
 ///On Submit Button ///
@@ -33,12 +33,18 @@ $('#a-la-carte').on('click', function () {
 
 });
 
+/////////////////////////
+/// Submit Answer Sum ///
+/////////////////////////
 
 
-// $('.checkbox label').mouseover(function(){
-//     $(this).append("test");
-// });
+$('#submit-answer').on('click', function() {
+  var sumArray = $("input[name=optionsRadios]:checked");
+  console.log(sumSelectedValues(sumArray));
 
+});
+
+$(document).on('ready', function() {
 
 });
 

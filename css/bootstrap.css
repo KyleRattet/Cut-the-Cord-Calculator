@@ -43,6 +43,11 @@ audio:not([controls]) {
 template {
   display: none;
 }
+
+/*.hidden {
+  display:none !important;
+}*/
+
 a {
   background-color: transparent;
 }

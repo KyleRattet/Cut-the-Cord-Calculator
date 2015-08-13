@@ -25,8 +25,32 @@ function costCompare (menuTotal, monthlyCost) {
   }
 }
 
-///////////////////////////////////////
-///  annualized monthly comparison  ///
-///////////////////////////////////////
+//////////////////////////
+/// sum survey answers ///
+//////////////////////////
+
+// //get all checked box values, returns an array
+// function getSelectedValues () {
+//   var checkedArray = $($("input[name=optionsRadios]:checked"));
+//   console.log(checkedArray);
+//   var total = 0;
+//   for (var i = 0; i < checkedArray.length; i++) {
+//     total += checkedArray[i].val();
+//   }
+// }
+// function getSelectedValues(arr) {
+//   arr =
+
+
+// }
+
+///sum selected values, from an array to a value
+function sumSelectedValues (array) {
+  var total = 0;
+  for (var i = 0; i < array.length; i++) {
+     total += parseInt(array[i].value);
+  }
+  return total;
+}
 
 

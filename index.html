@@ -53,10 +53,10 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Survey</a>
+                        <a class="page-scroll" href="#about">Calculator</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services">Survey</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -81,7 +81,7 @@
         </div>
     </section>
 
-    <!-- Survey Section -->
+    <!-- Calculator Section -->
     <section id="about" class="about-section">
         <div class="container">
           <div class="row">
@@ -115,7 +115,7 @@
           <div class="checkbox">
             <label>
               <input type="checkbox" value="9">
-              Netflix ($9)
+              Netflix ($9) <span style="display:none">More Information</span>
             </label>
           </div>
           <div class="checkbox">
@@ -204,12 +204,166 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Survey Section -->
     <section id="services" class="services-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Services Section</h1>
+                    <h1>Survey</h1>
+
+
+
+                    <div class="row">
+                      <div class="col-lg-12">
+
+
+
+                      <div class="row">
+                        <div class="col-lg-4">
+
+                        <form>
+
+
+                          <label for="question1">Do You Watch TV?</label>
+                          <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" >
+                                Yes
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="0">
+                                No
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div class="col-lg-4">
+
+                        <form>
+
+
+                          <label for="question2">Do you currently have the hardware necessary to stream?</label>
+                          <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" >
+                                Yes
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="0">
+                                No
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div class="col-lg-4">
+
+                        <form>
+
+
+                          <label for="question3">Can you wait to see shows online even though they've already aired on TV?</label>
+                          <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" >
+                                Yes
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="0">
+                                No
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-lg-4">
+
+                        <form>
+
+
+                          <label for="question4">How long are you willing to wait for your shows to be available?</label>
+                          <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" >
+                                I can wait a day.
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="2">
+                                I can wait a few days
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="3">
+                                 I can wait indefinitely
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div class="col-lg-4">
+
+                        <form>
+
+
+                          <label for="question5">Are you okay with just local broadcasting for news and sports?</label>
+                          <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" >
+                                Yes
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="0">
+                                No
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div class="col-lg-4">
+
+                        <form>
+
+
+                          <label for="question6">Is your internet connection faster than 25 megabits per second?</label>
+                          <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" >
+                                Yes
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="0">
+                                No
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+
+
+                      <button type="submit" id="submit-answer" class="btn btn-info btn-lg">Submit Answers</button>
+
+
+                      <div id="answer-container"></div>
+                      </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
