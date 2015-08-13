@@ -40,3 +40,19 @@ function sumSelectedValues (array) {
 }
 
 
+//////////////////////////////////
+/// survey results conditional ///
+//////////////////////////////////
+
+function surveyScore (number) {
+  if(number < 4) {
+    return "Your cable usage doesn't warrant keeping the service bundle.";
+  }
+  else if (number < 6) {
+    return "tough call";
+  }
+  else return "keep the cable package";
+
+}
+
+

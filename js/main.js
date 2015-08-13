@@ -1,8 +1,3 @@
-
-
-
-
-
 ///////////////////////
 ///On Submit Button ///
 ///////////////////////
@@ -33,6 +28,17 @@ $('#a-la-carte').on('click', function () {
 
 });
 
+// $('#a-la-carte').on('click', function () {
+//   $("#a-la-carte-input").show();
+//   var showsPerMonth = $("#a-la-carte-input").val();
+
+//   var total = perShow * showsPerMonth;
+//   // console.log(total);
+//   $('#a-la-carte').val(total);
+
+// });
+
+
 /////////////////////////
 /// Submit Answer Sum ///
 /////////////////////////
@@ -40,7 +46,10 @@ $('#a-la-carte').on('click', function () {
 
 $('#submit-answer').on('click', function() {
   var sumArray = $("input[name=optionsRadios]:checked");
-  console.log(sumSelectedValues(sumArray));
+  var score = (sumSelectedValues(sumArray));
+  var recommendation = surveyScore(score);
+
+  $('#answer-container').append('<p>' + recommendation + '</p>');
 
 });
 
