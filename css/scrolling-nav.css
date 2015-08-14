@@ -30,12 +30,12 @@ of those sections to manage the look and feel of the site. */
     height: 50%;
     padding-top: 150px;
     text-align: center;
-    background: #fff;
+    background: #B2C2D1;
 }
 
 .about-section {
     height: 100%;
-    padding-top: 100px;
+    padding-top: 75px;
     text-align: center;
     background: #eee;
 /*    position: relative;*/
@@ -50,9 +50,9 @@ of those sections to manage the look and feel of the site. */
 /*}*/
 .services-section {
     height: 100%;
-    padding-top: 100px;
+    padding-top: 75px;
     text-align: center;
-    background: #fff;
+    background: #B2C2D1;
  /*   position: relative;*/
 }
 /*
@@ -64,7 +64,7 @@ of those sections to manage the look and feel of the site. */
 
 .contact-section {
     height: 100%;
-    padding-top: 25px;
+    padding-top: 75px;
     text-align: center;
     background: #eee;
 }
