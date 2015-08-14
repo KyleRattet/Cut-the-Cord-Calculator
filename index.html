@@ -103,17 +103,35 @@
                   <form>
 
 
-                    <label for="question1">Do You Watch TV?</label>
+                    <label for="question1">How many hours of live TV do you watch each week?</label>
                     <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" >
-                          Yes
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="8" >
+                          I don't watch live TV
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="6">
+                          0-2 Hours/Week
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="4">
+                          2-4 Hours/Week
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="2">
+                          4-6 Hours/Week
                         </label>
                       </div>
                       <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios2" value="0">
-                          No
+                          6+ Hours/Week
                         </label>
                       </div>
                     </form>
@@ -124,10 +142,10 @@
                   <form>
 
 
-                    <label for="question2">Do you currently have the hardware necessary to stream?</label>
+                  <label for="question2">Do you currently have the hardware necessary to stream?</label>
                     <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" >
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="2" >
                           Yes
                         </label>
                       </div>
@@ -135,6 +153,12 @@
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios2" value="0">
                           No
+                        </label>
+                      </div>
+                       <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="1">
+                          For the most part
                         </label>
                       </div>
                     </form>
@@ -148,7 +172,7 @@
                     <label for="question3">Can you wait to see shows online even though they've already aired on TV?</label>
                     <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" >
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="2" >
                           Yes
                         </label>
                       </div>
@@ -198,7 +222,7 @@
                     <label for="question5">Are you okay with just local broadcasting for news and sports?</label>
                     <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" >
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="2" >
                           Yes
                         </label>
                       </div>
@@ -219,7 +243,7 @@
                     <label for="question6">Is your internet connection faster than 15 megabits per second?</label>
                     <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" >
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="4" >
                           Yes
                         </label>
                       </div>
@@ -234,13 +258,15 @@
                 </div>
 
 
-
+                <br>
                 <button type="submit" id="submit-answer" class="btn btn-info btn-lg">Submit Answers</button>
 
-
+                <br>
+                <br>
                 <div id="answer-container"></div>
                 <br>
-                <a class="btn btn-info page-scroll" href="#services">Cost/Benefit Analysis</a>
+                <br>
+                <a  id="cost-benefit-next" class="btn btn-info page-scroll" href="#services">Cost/Benefit Analysis</a>
                 </div>
               </div>
 
@@ -373,6 +399,8 @@
       </div>
     </div>
 
+      <a class="btn btn-info page-scroll" href="#contact">Final Recommendation</a>
+
         </div>
 
     </section>
@@ -397,7 +425,7 @@
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/dom.js"></script>
     <script type="text/javascript" src="js/utility.js"></script>
 
 </body>

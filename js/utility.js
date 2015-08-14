@@ -47,13 +47,13 @@ function sumSelectedValues (array) {
 
 function surveyScore (number) {
 
-  if(number < 4) {
-    return "Your cable usage doesn't warrant keeping the service bundle. Based on your behavior of generally low cable usage, lack of live viewing urgency, and streaming capabilities, you're unlikely to be a paid tv subscriber.";
+  if(number <= 5) {
+    return "Your survey results indicate you'd be unable to duplicate your media consumption without subscribing to a paid cable package.";
   }
-  else if (number < 6) {
+  else if (number <=15) {
     return "Based on your survey results, you're on the cusp of being indifferent between paying for cable tv and being able to get your media fix through other means. With that in mind, you could be an ideal candidate for exploring some alternatives to the traditional cable/internet bundle.";
   }
-  else return "Your survey results indicate you'd be unable to duplicate your media consumption without subscribing to a paid cable package.";
+  else return "Your cable usage doesn't warrant keeping the service bundle. Based on your behavior of generally low cable usage, lack of live viewing urgency, and streaming capabilities, you're unlikely to benefit from being be a paid TV subscriber.";
 
 }
 

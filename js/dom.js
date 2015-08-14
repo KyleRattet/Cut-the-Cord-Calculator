@@ -4,7 +4,9 @@
 
 // Gets monthly cost input, sums checked boxes, compares//
 
-$('#menu-submit').on("click", function (){
+$('#menu-submit').on("click", function (event){
+  event.preventDefault();
+
   $('#cost-comparison').html('');
   var checkedValues = $('input:checkbox:checked').map(function() {
     return this.value;
@@ -21,7 +23,9 @@ $('#menu-submit').on("click", function (){
 ///A La Carte Button ///
 ////////////////////////
 
-$('#a-la-carte').on('click', function () {
+$('#a-la-carte').on('click', function (event) {
+
+  event.preventDefault();
   var showsPerMonth= prompt("How many shows per month will you watch?");
   var total = 3 * showsPerMonth;
   $('#a-la-carte').val(total);
@@ -44,12 +48,15 @@ $('#a-la-carte').on('click', function () {
 /////////////////////////
 
 
-$('#submit-answer').on('click', function() {
+$('#submit-answer').on('click', function (event) {
+  event.preventDefault();
+  $('#answer-container').html("");
   var sumArray = $("input[name=optionsRadios]:checked");
   var score = (sumSelectedValues(sumArray));
+  console.log(score);
   var recommendation = surveyScore(score);
 
-  $('#answer-container').append('<p>' + recommendation + '</p>');
+  $('#answer-container').append('<h3>' + recommendation + '</h3>');
 
 });
 
