@@ -35,32 +35,32 @@ of those sections to manage the look and feel of the site. */
 
 .about-section {
     height: 100%;
-    padding-top: 25px;
+    padding-top: 100px;
     text-align: center;
     background: #eee;
-    position: relative;
+/*    position: relative;*/
 }
 
-#cost-benefit-next {
+/*#cost-benefit-next {
     position: absolute;
     top: 675px;
-    right: 660px;
+    right: 660px;*/
 
 
-}
+/*}*/
 .services-section {
     height: 100%;
-    padding-top: 25px;
+    padding-top: 100px;
     text-align: center;
     background: #fff;
-    position: relative;
+ /*   position: relative;*/
 }
-
+/*
 #final-recommendation-next {
     position: absolute;
     top: 675px;
     right: 650px;
-}
+}*/
 
 .contact-section {
     height: 100%;

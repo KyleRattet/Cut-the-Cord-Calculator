@@ -7,11 +7,24 @@
 $('#menu-submit').on("click", function (event){
   event.preventDefault();
 
-  $('#cost-comparison').html('');
+  $('#recommendation-container').html('');
+
+  //updated a la carte total
+  var showsPerMonth = $("#a-la-carte-input").val();
+  console.log(showsPerMonth);
+  var total = 3 * showsPerMonth;
+  console.log(total);
+  $('#a-la-carte').val(total);
+
   var checkedValues = $('input:checkbox:checked').map(function() {
     return this.value;
     }).get();
+
+
+
   var menuTotal = (sumChecked(checkedValues)) + 40;
+
+
   var monthlyCost = ($('#monthly-cable-cost').val()).replace('$', '');
 
   //append to cost comparison
@@ -19,28 +32,14 @@ $('#menu-submit').on("click", function (event){
 
 });
 
-////////////////////////
-///A La Carte Button ///
-////////////////////////
+///////////////////////////////
+///A La Carte Button Render ///
+///////////////////////////////
 
-$('#a-la-carte').on('click', function (event) {
-
-  event.preventDefault();
-  var showsPerMonth= prompt("How many shows per month will you watch?");
-  var total = 3 * showsPerMonth;
-  $('#a-la-carte').val(total);
+$('#a-la-carte').on('click', function () {
+  $("#a-la-carte-input").show();
 
 });
-
-// $('#a-la-carte').on('click', function () {
-//   $("#a-la-carte-input").show();
-//   var showsPerMonth = $("#a-la-carte-input").val();
-
-//   var total = perShow * showsPerMonth;
-//   // console.log(total);
-//   $('#a-la-carte').val(total);
-
-// });
 
 
 /////////////////////////
@@ -50,13 +49,13 @@ $('#a-la-carte').on('click', function (event) {
 
 $('#submit-answer').on('click', function (event) {
   event.preventDefault();
-  $('#answer-container').html("");
+  $('#survey-recommendation-container').html("");
   var sumArray = $("input[name=optionsRadios]:checked");
   var score = (sumSelectedValues(sumArray));
   console.log(score);
   var recommendation = surveyScore(score);
 
-  $('#recommendation-container').append('<h3><strong>Usage Survey Results: </strong>' + recommendation + '</h3>');
+  $('#survey-recommendation-container').append('<h3><strong>Usage Survey Results: </strong>' + recommendation + '</h3>');
 
 });
 
