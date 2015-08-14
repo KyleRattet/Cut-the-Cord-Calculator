@@ -4,7 +4,7 @@
 
 // Gets monthly cost input, sums checked boxes, compares//
 
-$('#menu-submit').on("click", function (event){
+$('#menu-submit').on("submit", function (event){
   event.preventDefault();
 
   $('#recommendation-container').html('');
@@ -25,7 +25,7 @@ $('#menu-submit').on("click", function (event){
   var menuTotal = (sumChecked(checkedValues)) + 40;
 
 
-  var monthlyCost = ($('#monthly-cable-cost').val()).replace('$', '');
+  var monthlyCost = $('#monthly-cable-cost').val();
 
   //append to cost comparison
   $('#recommendation-container').append('<h3><strong>Compare Cost Results:</strong> Your monthly bill is $' + monthlyCost + ', and your monthly cost of streaming options is $' + menuTotal +'. ' + costCompare(menuTotal, monthlyCost) +'</h3>');
