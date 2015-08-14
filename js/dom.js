@@ -15,7 +15,7 @@ $('#menu-submit').on("click", function (event){
   var monthlyCost = ($('#monthly-cable-cost').val()).replace('$', '');
 
   //append to cost comparison
-  $('#cost-comparison').append('<p>Your monthly bill is $' + monthlyCost + ', and your monthly cost of streaming options is $' + menuTotal +'. ' + costCompare(menuTotal, monthlyCost) +'</p>');
+  $('#recommendation-container').append('<h3><strong>Cost/Benefit Analysis:</strong> Your monthly bill is $' + monthlyCost + ', and your monthly cost of streaming options is $' + menuTotal +'. ' + costCompare(menuTotal, monthlyCost) +'</h3>');
 
 });
 
@@ -56,7 +56,7 @@ $('#submit-answer').on('click', function (event) {
   console.log(score);
   var recommendation = surveyScore(score);
 
-  $('#answer-container').append('<h3>' + recommendation + '</h3>');
+  $('#recommendation-container').append('<h3><strong>Survey Results: </strong>' + recommendation + '</h3>');
 
 });
 
