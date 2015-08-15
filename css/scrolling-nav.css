@@ -38,16 +38,19 @@ of those sections to manage the look and feel of the site. */
     padding-top: 75px;
     text-align: center;
     background: #eee;
-/*    position: relative;*/
+    position: relative;
 }
 
-/*#cost-benefit-next {
+#cost-benefit-next {
     position: absolute;
-    top: 675px;
-    right: 660px;*/
+    width: 100%;
+    margin : auto;
+    bottom: 7px;
+    display: block;
+
+}
 
 
-/*}*/
 .services-section {
     height: 100%;
     padding-top: 75px;

@@ -11,6 +11,7 @@ function sumChecked (checkedValues) {
   return total;
 }
 
+
 //////////////////////////////////////////////
 ///compare checked values vs monthly cost  ///
 //////////////////////////////////////////////
@@ -26,12 +27,11 @@ function costCompare (menuTotal, monthlyCost) {
   }
 }
 
+
 //////////////////////////
 /// sum survey answers ///
 //////////////////////////
 
-
-///sum selected values, from an array to a value
 function sumSelectedValues (array) {
   var total = 0;
   for (var i = 0; i < array.length; i++) {
@@ -55,6 +55,7 @@ function surveyScore (number) {
   }
   else return "<em>Cut the cord!</em> Your cable usage doesn't warrant keeping the service bundle. Based on your behavior of generally low cable usage, lack of live viewing urgency, and streaming capabilities, you're unlikely to benefit from being be a paid TV subscriber.";
 }
+
 
 ///////////////////////////////
 /// score image conditional ///
