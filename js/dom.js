@@ -59,6 +59,24 @@ $('#submit-answer').on('click', function (event) {
 
 });
 
+////////////////////
+/// Reset Button ///
+////////////////////
+
+$('#reset').on('click', function() {
+  $('#survey-recommendation-container').html('');
+  $('#recommendation-container').html('');
+  $("input:radio").removeAttr("checked");
+  $('#menu-submit input[type="number"]').val("");
+  $('input:checkbox:checked').removeAttr("checked");
+  $('#picture-container').html('');
+
+});
+
+
+
+
+
 $(document).on('ready', function() {
 
 });

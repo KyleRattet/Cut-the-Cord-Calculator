@@ -60,24 +60,6 @@ function surveyScore (number) {
 /// score image conditional ///
 ///////////////////////////////
 
-// function imageChoice (number) {
-//   var image;
-
-//   if (number <= 5) {
-//     image = "1";
-//     // images/tv-luv.jpg;
-//   }
-
-//   else if (number <= 15) {
-//     image = "2";
-//     // images/decisions.jpg;
-//   }
-
-//   else image = "3";
-//     // images/cut-cord.png;
-
-//   console.log(image);
-// }
 function imageChoice(number) {
   if(number < 5) {
     $('#picture-container').html('<img src="images/tv-luv.jpg" alt="cut-cord" style="width:400px;height:400px;"/>');
