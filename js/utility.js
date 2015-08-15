@@ -54,7 +54,40 @@ function surveyScore (number) {
     return "<em>Consider cord shaving!</em> Based on your survey results, you're on the cusp of being indifferent between paying for cable tv and being able to get your media fix through other means. With that in mind, you could be an ideal candidate for exploring some alternatives to the traditional cable/internet bundle.";
   }
   else return "<em>Cut the cord!</em> Your cable usage doesn't warrant keeping the service bundle. Based on your behavior of generally low cable usage, lack of live viewing urgency, and streaming capabilities, you're unlikely to benefit from being be a paid TV subscriber.";
-
 }
 
+///////////////////////////////
+/// score image conditional ///
+///////////////////////////////
+
+// function imageChoice (number) {
+//   var image;
+
+//   if (number <= 5) {
+//     image = "1";
+//     // images/tv-luv.jpg;
+//   }
+
+//   else if (number <= 15) {
+//     image = "2";
+//     // images/decisions.jpg;
+//   }
+
+//   else image = "3";
+//     // images/cut-cord.png;
+
+//   console.log(image);
+// }
+function imageChoice(number) {
+  if(number < 5) {
+    $('#picture-container').html('<img src="images/tv-luv.jpg" alt="cut-cord" style="width:400px;height:400px;"/>');
+  }
+  else if (number <= 15) {
+    $('#picture-container').html('<img src="images/decisions.jpg" alt="cut-cord" style="width:400px;height:400px;"/>');
+  }
+  else {
+  $('#picture-container').html('<img src="images/cut-cord.png" alt="cut-cord" style="width:400px;height:400px;"/>');
+  }
+
+}
 

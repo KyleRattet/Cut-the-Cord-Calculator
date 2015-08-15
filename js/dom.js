@@ -52,9 +52,8 @@ $('#submit-answer').on('click', function (event) {
   $('#survey-recommendation-container').html("");
   var sumArray = $("input[name=optionsRadios]:checked");
   var score = (sumSelectedValues(sumArray));
-  console.log(score);
+  imageChoice(score);
   var recommendation = surveyScore(score);
-
 
   $('#survey-recommendation-container').append('<h3><strong>Usage Survey Results: </strong>' + recommendation + '</h3>');
 
