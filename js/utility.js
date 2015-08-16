@@ -63,13 +63,13 @@ function surveyScore (number) {
 
 function imageChoice(number) {
   if(number < 5) {
-    $('#picture-container').html('<img src="images/tv-luv.jpg" alt="cut-cord" style="width:400px;height:400px;"/>');
+    $('#modal-main').html('<img src="images/tv-luv.jpg" alt="cut-cord" style="width:400px;height:400px;"/>');
   }
   else if (number <= 15) {
-    $('#picture-container').html('<img src="images/decisions.jpg" alt="cut-cord" style="width:400px;height:400px;"/>');
+    $('#modal-main').html('<img src="images/decisions.jpg" alt="cut-cord" style="width:400px;height:400px;"/>');
   }
   else {
-  $('#picture-container').html('<img src="images/cut-cord.png" alt="cut-cord" style="width:400px;height:400px;"/>');
+  $('#modal-main').html('<img src="images/cut-cord.png" alt="cut-cord" style="width:400px;height:400px;"/>');
   }
 
 }

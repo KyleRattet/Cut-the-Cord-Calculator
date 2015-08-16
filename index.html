@@ -378,7 +378,7 @@
 
       </div>
 
-         <div class="row">
+        <!--  <div class="row">
         <div class="col-xs-offset-3 col-xs-6">
         <br>
 
@@ -386,13 +386,38 @@
           <br>
           <p>*Assumes 25Mbps Broadband Package for $40/month</p>
           <a class="btn btn-default btn-sm page-scroll" href="#contact">See Recommendations</a>
-        </div>
+        </div> -->
       </div>
 
+         <button id="menu-submit" type="submit" class="btn btn-primary btn-sl" data-toggle="modal" data-target="#myModal">
+          Submit
+        </button>
 
           </form>
 
         </div>
+
+        <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Recommendation</h4>
+      </div>
+      <div id="modal-main" class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="reset" type="button" class="btn btn-primary" data-dismiss="modal">Re-start Survey</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     </section>
 
@@ -411,7 +436,7 @@
             </div>
             <div class="row">
 
-            <a class="btn btn-default btn-sm page-scroll" id="reset" href="#intro">Start Over</a>
+   <!--          <a class="btn btn-default btn-sm page-scroll" id="reset" href="#intro">Start Over</a> -->
 
             </div>
         </div>
