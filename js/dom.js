@@ -20,10 +20,7 @@ $('#menu-submit').on("submit", function (event){
     return this.value;
     }).get();
 
-
-
   var menuTotal = (sumChecked(checkedValues)) + 40;
-
 
   var monthlyCost = $('#monthly-cable-cost').val();
 
@@ -70,6 +67,7 @@ $('#reset').on('click', function() {
   $('#menu-submit input[type="number"]').val("");
   $('input:checkbox:checked').removeAttr("checked");
   $('#picture-container').html('');
+  $("#a-la-carte-input").hide();
 
 });
 
