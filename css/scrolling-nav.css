@@ -38,13 +38,6 @@ html {
     position: relative;
 }
 
-#cost-benefit-next {
-    position: absolute;
-    width: 100%;
-    margin : auto;
-    bottom: 7px;
-    display: block;
-}
 
 .services-section {
     padding-top: 50px;
