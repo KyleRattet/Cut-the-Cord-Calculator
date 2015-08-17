@@ -18,7 +18,8 @@ $('#menu-submit').on("submit", function (event){
   event.preventDefault();
   $('#recommendation-container').html('');
 
-  var monthlyCost = $('#monthly-cable-cost').val();
+  var monthlyCableCost = $('#monthly-cable-cost').val();
+  var monthlyInternetCost = parseInt($('#monthly-internet-cost').val());
 
   //updated a la carte total
   var showsPerMonth = $("#a-la-carte-input").val();
@@ -32,11 +33,11 @@ $('#menu-submit').on("submit", function (event){
     return this.value;
     }).get();
 
-  var menuTotal = (sumChecked(checkedValues)) + 40;
+  var menuTotal = (sumChecked(checkedValues)) + (monthlyInternetCost);
 
 
   //append to cost comparison
-  $('#modal-calculate').html('<h3><strong>Cost Comparison:</strong> Your monthly bill is $' + monthlyCost + ', and your monthly cost of streaming options is $' + menuTotal +'. ' + costCompare(menuTotal, monthlyCost) +'</h3>');
+  $('#modal-calculate').html('<h3><strong>Cost Comparison:</strong> Your monthly bill is $' + monthlyCableCost + ', and your monthly cost of streaming options is $' + menuTotal +'. ' + costCompare(menuTotal, monthlyCableCost) +'</h3>');
 
 
 });
@@ -91,7 +92,7 @@ $('#reset').on('click', function() {
         scrollTop: $("#page-top").offset().top
     }, 1000);
   $(':button')[1].disabled = true;
-
+  $("#a-la-carte-input").val('')
 
 });
 

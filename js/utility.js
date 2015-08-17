@@ -16,8 +16,8 @@ function sumChecked (checkedValues) {
 ///compare checked values vs monthly cost  ///
 //////////////////////////////////////////////
 
-function costCompare (menuTotal, monthlyCost) {
-  var monthlyDifference = monthlyCost - menuTotal;
+function costCompare (menuTotal, monthlyCableCost) {
+  var monthlyDifference = monthlyCableCost - menuTotal;
   var annualizedDifference = 12*monthlyDifference;
 
   if(annualizedDifference > 0) {
