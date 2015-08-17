@@ -298,7 +298,7 @@
               <form id="menu-submit" align="left">
               <div class="form-group">
                 <label for="costofcable">Cost of Cable/Internet Bundle</label>
-                <input type="number" class="form-control" id="monthly-cable-cost" placeholder="Enter Your Monthly Bill" >
+                <input type="number" class="form-control" id="monthly-cable-cost" placeholder="Enter Your Monthly Bill to Compare" >
               </div>
 
             </div>
@@ -396,7 +396,7 @@
 
         <!-- Submit Calculator-->
 
-        <button id="menu-submit" type="submit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+        <button id="menu-submit" type="submit" class="btn btn-primary btn-sm" disabled="disabled" data-toggle="modal" data-target="#myModal">
           Submit
         </button>
 
@@ -429,7 +429,9 @@
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h2 class="modal-title" id="myModalLabel">Recommendation</h2>
             </div>
-            <div id="modal-main" class="modal-body"></div>
+            <div id="modal-image" class="modal-body"></div>
+            <div id="modal-survey" class="modal-body"></div>
+            <div id="modal-calculate" class="modal-body"></div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               <button id="reset" type="button" class="btn btn-primary" data-dismiss="modal">Re-start Survey</button>

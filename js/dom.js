@@ -1,3 +1,11 @@
+////////////////////////
+///Monthly Bill Input///
+////////////////////////
+$('#monthly-cable-cost').on('change', function() {
+  $(':button')[1].removeAttribute('disabled');
+});
+
+
 ///////////////////////
 ///On Submit Button ///
 ///////////////////////
@@ -9,13 +17,6 @@ $('#menu-submit').on("submit", function (event){
   $('#recommendation-container').html('');
 
   var monthlyCost = $('#monthly-cable-cost').val();
-
-  //alert popup if monthly cost isn't filled out
-  if(monthlyCost === "") {
-    monthlyBillAlert();
-  }
-
-
 
   //updated a la carte total
   var showsPerMonth = $("#a-la-carte-input").val();
@@ -34,7 +35,7 @@ $('#menu-submit').on("submit", function (event){
 
 
   //append to cost comparison
-  $('#modal-main').append('<h3><strong>Cost Comparison:</strong> Your monthly bill is $' + monthlyCost + ', and your monthly cost of streaming options is $' + menuTotal +'. ' + costCompare(menuTotal, monthlyCost) +'</h3>');
+  $('#modal-calculate').html('<h3><strong>Cost Comparison:</strong> Your monthly bill is $' + monthlyCost + ', and your monthly cost of streaming options is $' + menuTotal +'. ' + costCompare(menuTotal, monthlyCost) +'</h3>');
 
 
 });
@@ -68,7 +69,7 @@ $('#submit-answer').on('click', function (event) {
     surveyAlert();
   }
 
-  $('#modal-main').append('<h3><strong>Usage Survey Results: </strong>' + recommendation + '</h3>');
+  $('#modal-survey').html('<h3><strong>Usage Survey Results: </strong>' + recommendation + '</h3>');
 
 });
 

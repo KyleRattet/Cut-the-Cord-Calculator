@@ -63,22 +63,24 @@ function surveyScore (number) {
 
 function imageChoice(number) {
   if(number < 5) {
-    $('#modal-main').html('<img src="images/tv-luv.jpg" alt="cut-cord" style="width:300px;height:300px;"/>');
+    $('#modal-image').html('<img src="images/tv-luv.jpg" alt="cut-cord" style="width:300px;height:300px;"/>');
   }
   else if (number <= 15) {
-    $('#modal-main').html('<img src="images/decisions.jpg" alt="cut-cord" style="width:300px;height:300px;"/>');
+    $('#modal-image').html('<img src="images/decisions.jpg" alt="cut-cord" style="width:300px;height:300px;"/>');
   }
   else {
-  $('#modal-main').html('<img src="images/cut-cord.png" alt="cut-cord" style="width:300px;height:300px;"/>');
+  $('#modal-image').html('<img src="images/cut-cord.png" alt="cut-cord" style="width:300px;height:300px;"/>');
   }
 
 }
+
 
 ////////////////////////////////////
 /// alert popup for usage survey ///
 ////////////////////////////////////
 
 function surveyAlert(event) {
+
   $('.survey_alert_placeholder').html('');
 
   $('.survey_alert_placeholder').append('<div id="alertdiv" class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><span>'+"Please make sure to respond to all questions"+'</span></div>');
@@ -95,16 +97,16 @@ function surveyAlert(event) {
 /// alert popup for cost calc. ///
 //////////////////////////////////
 
-function monthlyBillAlert(event) {
+// function monthlyBillAlert(event) {
+//   event.preventDefault();
+//   $('.cost_alert_placeholder').html('');
 
-  $('.cost_alert_placeholder').html('');
+//   $('.cost_alert_placeholder').append('<div id="alertdiv" class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><span>'+"Please make sure to enter your monthly cable bundle bill."+'</span></div>');
 
-  $('.cost_alert_placeholder').append('<div id="alertdiv" class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><span>'+"Please make sure to enter your monthly cable bundle bill."+'</span></div>');
+//   $("#alertdiv").delay(2000).slideUp(500, function(){
+//     $("#alertdiv").alert('close');
+//   });
 
-  $("#alertdiv").delay(2000).slideUp(500, function(){
-    $("#alertdiv").alert('close');
-  });
 
-  event.preventDefault();
-}
+// }
 
