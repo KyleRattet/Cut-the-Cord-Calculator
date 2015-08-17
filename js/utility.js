@@ -82,6 +82,11 @@ function surveyAlert(event) {
   $('.survey_alert_placeholder').html('');
 
   $('.survey_alert_placeholder').append('<div id="alertdiv" class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><span>'+"Please make sure to respond to all questions"+'</span></div>');
+
+  $("#alertdiv").delay(2000).slideUp(500, function(){
+    $("#alertdiv").alert('close');
+  });
+
   event.preventDefault();
 
 }
@@ -95,6 +100,10 @@ function monthlyBillAlert(event) {
   $('.cost_alert_placeholder').html('');
 
   $('.cost_alert_placeholder').append('<div id="alertdiv" class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><span>'+"Please make sure to enter your monthly cable bundle bill."+'</span></div>');
+
+  $("#alertdiv").delay(2000).slideUp(500, function(){
+    $("#alertdiv").alert('close');
+  });
 
   event.preventDefault();
 }

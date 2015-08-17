@@ -35,10 +35,10 @@
                 <a class="navbar-brand page-scroll" href="#page-top">Home</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
@@ -51,9 +51,9 @@
 
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+
         </div>
-        <!-- /.container -->
+
     </nav>
 
     <!-- Intro Section -->
@@ -62,14 +62,14 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h1>Should You Cut the Cord?</h1>
-                    <p>Cable TV Alternatives - A Calculator Guide to Cutting the Cord</p>
+                    <p>Cable TV Alternatives - A Usage Survey and Calculator Guide to Cutting the Cord</p>
                     <a class="btn btn-primary btn-sm page-scroll" href="#survey">Take Survey</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Calculator Section -->
+    <!-- Survey Section -->
     <section id="survey" class="survey-section">
 
      <div class="container">
@@ -254,6 +254,7 @@
 
                 <br>
 
+            <!-- Submit Survey -->
                 <div class="row">
 
                  <a id="submit-answer" class="btn btn-primary btn-sm page-scroll" href="#calculator">Submit</a>
@@ -261,6 +262,8 @@
                 </div>
 
                 <br>
+
+            <!-- Alert Placeholder-->
 
                 <div class="row">
 
@@ -272,42 +275,37 @@
 
                 </div>
 
-                </div>
               </div>
-
-
-                </div>
+             </div>
             </div>
-
-
-
-        </div>
+           </div>
+          </div>
 
     </section>
 
-    <!-- Survey Section -->
+    <!-- Calculator Section -->
     <section id="calculator" class="calculator-section">
 
       <div class="container">
           <div class="row">
-      <div class="col-xs-12">
+            <div class="col-xs-12">
 
-      <h1>Compare Your Current Bundle Cost to Alternatives</h1>
-      <br>
-      <h2>What is your cable and internet bundle costing you monthly?</h2>
+              <h1>Compare Your Current Bundle Cost to Alternatives</h1>
+              <br>
+              <h2>What is your cable and internet bundle costing you monthly?</h2>
 
-        <div class="col-xs-offset-4 col-xs-4">
-          <form id="menu-submit" align="left">
-            <div class="form-group">
-              <label for="costofcable">Cost of Cable/Internet Bundle</label>
-              <input type="number" class="form-control" id="monthly-cable-cost" placeholder="Enter Your Monthly Bill" >
+            <div class="col-xs-offset-4 col-xs-4">
+              <form id="menu-submit" align="left">
+              <div class="form-group">
+                <label for="costofcable">Cost of Cable/Internet Bundle</label>
+                <input type="number" class="form-control" id="monthly-cable-cost" placeholder="Enter Your Monthly Bill" >
+              </div>
+
             </div>
 
-        </div>
+            </div>
 
-      </div>
-
-    </div>
+            </div>
 
     <div class="row">
 
@@ -396,25 +394,29 @@
 
       </div>
 
-         <button id="menu-submit" type="submit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+        <!-- Submit Calculator-->
+
+        <button id="menu-submit" type="submit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
           Submit
         </button>
 
         </div>
 
 
+        <!-- Alert Placeholder-->
 
         <div class="row">
 
           <div class="col-xs-offset-4 col-xs-4">
-          <br>
+              <br>
+
             <div class="cost_alert_placeholder"></div>
 
           </div>
 
         </div>
 
-        </form>
+    </form>
 
         <!-- Button trigger modal -->
 
@@ -425,11 +427,9 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Recommendation</h4>
+              <h2 class="modal-title" id="myModalLabel">Recommendation</h2>
             </div>
-            <div id="modal-main" class="modal-body">
-
-            </div>
+            <div id="modal-main" class="modal-body"></div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               <button id="reset" type="button" class="btn btn-primary" data-dismiss="modal">Re-start Survey</button>
