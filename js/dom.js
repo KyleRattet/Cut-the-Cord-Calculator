@@ -101,7 +101,7 @@ $('#reset').on('click', function() {
 
 
 $(document).on('ready', function() {
-
+   $(this).scrollTop(0);
 });
 
 
