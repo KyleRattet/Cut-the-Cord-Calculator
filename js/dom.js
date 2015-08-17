@@ -2,7 +2,9 @@
 ///Monthly Bill Input///
 ////////////////////////
 $('#monthly-cable-cost').on('change', function() {
-  $(':button')[1].removeAttribute('disabled');
+  if ($(':button')[1].disabled === true) {
+      $(':button')[1].disabled = false;
+  }
 });
 
 
@@ -22,7 +24,6 @@ $('#menu-submit').on("submit", function (event){
   var showsPerMonth = $("#a-la-carte-input").val();
   console.log(showsPerMonth);
   var total = 3 * showsPerMonth;
-  console.log(total);
   $('#a-la-carte').val(total);
 
 
@@ -85,10 +86,12 @@ $('#reset').on('click', function() {
   $('input:checkbox:checked').removeAttr("checked");
   $('#picture-container').html('');
   $("#a-la-carte-input").hide();
-  $('#modal-main').empty();
+  $('.modal-body').html('');
   $('html, body').animate({
         scrollTop: $("#page-top").offset().top
     }, 1000);
+  $(':button')[1].disabled = true;
+
 
 });
 
