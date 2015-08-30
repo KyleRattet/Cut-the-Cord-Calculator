@@ -52,10 +52,15 @@ var questions = [
 
 
 $('#start').on('click', function () {
-  renderQuestion(1);
-  renderResponse(1);
-  submitResponse(1);
+  renderQuestion(0);
+  renderResponse(0);
+  // console.log("test");
+  submitResponse(0);
 });
+
+
+var surveySum = 0;
+
 
 
 //render question function
@@ -65,15 +70,52 @@ function renderQuestion (num) {
 
 function renderResponse (num) {
 
+
+
   for (var i = 0; i < questions[num][0].response.length; i++) {
+    var value = questions[num][0].values[i];
+    $('#renderResponse').append('<p>'+'<label>'+'<input type="radio" name="optionsRadios" value=value>'+questions[num][0].response[i]+'</label>'+'</p>');
+    console.log(value, "value");
 
-    $('#renderResponse').append('<p>'+'<label>'+'<input type="radio" name="optionsRadios" value="questions[num].values[num]"">'+questions[num][0].response[i]+'</label>'+'</p>');
 
+  //   if($("input[name=optionsRadios]:checked" === true)) {
+  //     surveySum += questions[num][0].values[i];
+  //   }
+  //   console.log(surveySum);
+  // }
     }
+    $('#renderResponse').append('<input type="submit" class="form-control" id="nextQuestion" placeholder="Monthly Bill" >');
+    console.log(surveySum);
 
 }
 
 function submitResponse (num) {
-  $('#renderResponse').append('<input type="submit" class="form-control" placeholder="Monthly Bill" >');
+//   $('#nextQuestion').append('<input type="submit" class="form-control" id="nextQuestion" placeholder="Monthly Bill" >');
+// //   console.log("test");
+  // console.log(surveySum);
+  // if (('.optionsRadios').attr('checked')) {
+  //   console.log('test');
+
+  // }
+  // surveySum += $("input[name=optionsRadios]:checked").val();
+  $('#nextQuestion').on('click', function () {
+  $('#renderQuestion').html('');
+  $('#renderResponse').html('');
+  renderQuestion(num+1);
+  renderResponse(num+1);
+  submitResponse(num+1);
+
+  });
+
 
 }
+
+$('#nextQuestion').on('click', function () {
+  // $('#renderQuestion').html('');
+  // $('#renderResponse').html('');
+  console.log('test');
+
+});
+
+
+// $("input[name=optionsRadios]:checked").val()
