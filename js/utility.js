@@ -53,7 +53,7 @@ function surveyScore (number) {
   else if (number <=15) {
     return "<em>Consider cord shaving!</em> Based on your survey results, you're on the cusp of being indifferent between paying for cable tv and being able to get your media fix through other means. With that in mind, you could be an ideal candidate for exploring some alternatives to the traditional cable/internet bundle.";
   }
-  else return "<em>Cut the cord!</em> Your cable usage doesn't warrant keeping the service bundle. Based on your behavior of generally low cable usage, lack of live viewing urgency, and streaming capabilities, you're unlikely to benefit from being be a paid TV subscriber.";
+  else return "<em>Cut the cord!</em> Your cable usage doesn't warrant keeping the service bundle. Based on your behavior of generally low cable usage, lack of live viewing urgency, and quality streaming capabilities, you're unlikely to benefit from being be a paid TV subscriber.";
 }
 
 
@@ -93,20 +93,5 @@ function surveyAlert(event) {
 
 }
 
-//////////////////////////////////
-/// alert popup for cost calc. ///
-//////////////////////////////////
 
-// function monthlyBillAlert(event) {
-//   event.preventDefault();
-//   $('.cost_alert_placeholder').html('');
-
-//   $('.cost_alert_placeholder').append('<div id="alertdiv" class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><span>'+"Please make sure to enter your monthly cable bundle bill."+'</span></div>');
-
-//   $("#alertdiv").delay(2000).slideUp(500, function(){
-//     $("#alertdiv").alert('close');
-//   });
-
-
-// }
 

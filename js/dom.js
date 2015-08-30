@@ -1,3 +1,7 @@
+$(document).on('ready', function() {
+   $(this).scrollTop(0);
+});
+
 ////////////////////////
 ///Monthly Bill Input///
 ////////////////////////
@@ -28,7 +32,6 @@ $('#menu-submit').on("submit", function (event){
   $('#a-la-carte').val(total);
 
 
-
   var checkedValues = $('input:checkbox:checked').map(function() {
     return this.value;
     }).get();
@@ -36,7 +39,7 @@ $('#menu-submit').on("submit", function (event){
   var menuTotal = (sumChecked(checkedValues)) + (monthlyInternetCost);
 
 
-  //append to cost comparison
+  //append to cost comparison section on modal
   $('#modal-calculate').html('<h3><strong>Cost Comparison:</strong> Your monthly bill is $' + monthlyCableCost + ', and your monthly cost of streaming options is $' + menuTotal +'. ' + costCompare(menuTotal, monthlyCableCost) +'</h3>');
 
 
@@ -71,6 +74,7 @@ $('#submit-answer').on('click', function (event) {
     surveyAlert();
   }
 
+ // append to survey section on modal
   $('#modal-survey').html('<h3><strong>Usage Survey Results: </strong>' + recommendation + '</h3>');
 
 });
@@ -100,8 +104,6 @@ $('#reset').on('click', function() {
 
 
 
-$(document).on('ready', function() {
-   $(this).scrollTop(0);
-});
+
 
 
