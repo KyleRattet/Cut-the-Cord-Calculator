@@ -70,24 +70,39 @@ function renderQuestion (num) {
 
 function renderResponse (num) {
 
+    var checked= [];
+    var values=[];
 
+  // for (var j = 0; j < questions[num][0].values.length; i++) {
+  //   values.push(questions[num][0].values[j]);
+  // }
+
+  // console.log(values);
 
   for (var i = 0; i < questions[num][0].response.length; i++) {
-    var value = questions[num][0].values[i];
-    $('#renderResponse').append('<p>'+'<label>'+'<input type="radio" name="optionsRadios" value=value>'+questions[num][0].response[i]+'</label>'+'</p>');
-    console.log(value, "value");
+    // values.push(questions[num][0].values[i]);
+    $('#renderResponse').append('<p><label>'+
+      '<input type="radio" name="optionsRadios"'+
+      'value="'+questions[num][0].values[i]+'">'+
+      questions[num][0].response[i]+'</label></p>');
+    // console.log(values, "values");
 
 
-  //   if($("input[name=optionsRadios]:checked" === true)) {
-  //     surveySum += questions[num][0].values[i];
-  //   }
-  //   console.log(surveySum);
-  // }
+    // $("input[name=optionsRadios]:checked")
+    // checked.push("input[name=optionsRadios]:checked");
+    // if($("input[name=optionsRadios]:checked" === true)) {
+    //   surveySum += questions[num][0].values[i];
+    // }
+    // console.log(surveySum);
+    // console.log(checked, "checked");
+
     }
-    $('#renderResponse').append('<input type="submit" class="form-control" id="nextQuestion" placeholder="Monthly Bill" >');
-    console.log(surveySum);
+    $('#renderResponse').append('<input type="submit" class="form-control" id="nextQuestion">');
+    // console.log(surveySum);
 
 }
+
+
 
 function submitResponse (num) {
 //   $('#nextQuestion').append('<input type="submit" class="form-control" id="nextQuestion" placeholder="Monthly Bill" >');
