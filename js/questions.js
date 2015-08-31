@@ -79,18 +79,9 @@ function renderResponse (num) {
       'value="'+questions[num][0].values[i]+'">'+
       questions[num][0].response[i]+'</label></p>');
 
-
-    // $("input[name=optionsRadios]:checked")
-    // checked.push("input[name=optionsRadios]:checked");
-    // if($("input[name=optionsRadios]:checked" === true)) {
-    //   surveySum += questions[num][0].values[i];
-    // }
-    // console.log(surveySum);
-    // console.log(checked, "checked");
-
     }
     $('#renderResponse').append('<input type="submit" class="form-control" id="nextQuestion">');
-    // console.log(surveySum);
+
 
 }
 
@@ -108,6 +99,11 @@ function submitResponse (num) {
   renderQuestion(num+1);
   renderResponse(num+1);
   submitResponse(num+1);
+
+  imageChoice(surveySum);
+  var recommendation = surveyScore(surveySum);
+
+  $('#modal-survey').html('<h3><strong>Usage Survey Results: </strong>' + recommendation + '</h3>');
 
   });
 
