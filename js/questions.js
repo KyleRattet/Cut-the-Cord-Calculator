@@ -1,5 +1,4 @@
 //create questions array
-
 var questions = [
   [{
     number: 1,
@@ -37,23 +36,12 @@ var questions = [
     response: ["Yes", "No"],
     values: [4,0]
   }]
-
-
-
-
 ];
 
 
 
-
-///In each object
-//Question #:
-//Question
-//Answer Options
-//Answer Values
-
-
 $('#start').on('click', function () {
+  $('#intro').hide();
   renderQuestion(0);
   renderResponse(0);
   // console.log("test");
@@ -62,8 +50,6 @@ $('#start').on('click', function () {
 
 
 var surveySum = 0;
-// console.log(surveySum);
-
 
 //render question function
 function renderQuestion (num) {
@@ -82,44 +68,19 @@ function renderQuestion (num) {
 
 function renderResponse (num) {
 
-
-  // if(num<=questions.length-2) {
   for (var i = 0; i < questions[num][0].response.length; i++) {
     // values.push(questions[num][0].values[i]);
     $('#renderResponse').append('<p><label>'+
       '<input type="radio" name="optionsRadios"'+
       'value="'+questions[num][0].values[i]+'">'+
       questions[num][0].response[i]+'</label></p>');
-
     }
     $('#renderResponse').append('<input type="submit" class="btn btn-primary btn-sm" id="nextQuestion">');
-
-  // } else {
-  //   for (var i = 0; i < questions[num][0].response.length; i++){
-  //   $('#renderResponse').append('<p><label>'+
-  //     '<input type="radio" name="optionsRadios"'+
-  //     'value="'+questions[num][0].values[i]+'">'+
-  //     questions[num][0].response[i]+'</label></p>');
-
-
-
-  // }
-
-
-  //   $('#renderResponse').append('<a id="submit-answer" class="btn btn-primary btn-sm page-scroll" href="#calculator">Submit</a>');
-  //   surveySum += parseInt($("input[name=optionsRadios]:checked").val());
-  //   $('#calculator').show();
-  //   console.log(surveySum, "survey Sum");
-
-
-
-  // }
-
 }
 
 
 function submitResponse (num) {
-  console.log(num, "number");
+
   if(num < questions.length-1) {
     $('#nextQuestion').on('click', function () {
     surveySum += parseInt($("input[name=optionsRadios]:checked").val());
@@ -142,21 +103,8 @@ function submitResponse (num) {
     $('#modal-survey').html('<h3><strong>Usage Survey Results: </strong>' + recommendation + '</h3>');
     $('#survey').hide();
     $('#calculator').show();
-
-
-
-  });
+    });
   }
-
-
 }
 
-$('#submit-answer').on('click', function () {
-  // $('#renderQuestion').html('');
-  // $('#renderResponse').html('');
-  console.log('test to next section');
 
-});
-
-
-// $("input[name=optionsRadios]:checked").val()

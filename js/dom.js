@@ -3,16 +3,18 @@ $(document).on('ready', function() {
    $('#survey').hide();
    $('#usageHeader').hide();
    $('#calculator').hide();
+
+   $('#monthly-cable-cost').on('change', function() {
+  if ($(':button')[1].disabled === true) {
+      $(':button')[1].disabled = false;
+  }
+});
 });
 
 ////////////////////////
 ///Monthly Bill Input///
 ////////////////////////
-$('#monthly-cable-cost').on('change', function() {
-  if ($(':button')[1].disabled === true) {
-      $(':button')[1].disabled = false;
-  }
-});
+
 
 
 ///////////////////////
@@ -99,7 +101,13 @@ $('#reset').on('click', function() {
         scrollTop: $("#page-top").offset().top
     }, 1000);
   $(':button')[1].disabled = true;
-  $("#a-la-carte-input").val('')
+  $("#a-la-carte-input").val('');
+
+   $(this).scrollTop(0);
+   $('#survey').hide();
+   $('#usageHeader').hide();
+   $('#calculator').hide();
+   $('#intro').show();
 
 });
 
