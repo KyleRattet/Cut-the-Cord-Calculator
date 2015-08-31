@@ -1,5 +1,8 @@
 $(document).on('ready', function() {
    $(this).scrollTop(0);
+   $('#survey').hide();
+   $('#usageHeader').hide();
+   $('#calculator').hide();
 });
 
 ////////////////////////

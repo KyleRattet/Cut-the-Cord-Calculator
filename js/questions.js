@@ -44,6 +44,8 @@ var questions = [
 ];
 
 
+
+
 ///In each object
 //Question #:
 //Question
@@ -60,18 +62,28 @@ $('#start').on('click', function () {
 
 
 var surveySum = 0;
-console.log(surveySum);
+// console.log(surveySum);
 
 
 //render question function
 function renderQuestion (num) {
-  $('#renderQuestion').append('<h2>'+questions[num][0].number +". " + questions[num][0].question+'</h2>');
+  if(num<=questions.length-1) {
+    $('#survey').show();
+    $('#usageHeader').show();
+    $('#renderQuestion').append('<h2>'+questions[num][0].number +". " + questions[num][0].question+'</h2>');
+
+  } else {
+    $('#survey').show();
+    $('#usageHeader').show();
+    $('#renderQuestion').append('<h2>'+questions[num][0].number +". " + questions[num][0].question+'</h2>');
+
+  }
 }
 
 function renderResponse (num) {
 
-    var checked= [];
 
+  // if(num<=questions.length-2) {
   for (var i = 0; i < questions[num][0].response.length; i++) {
     // values.push(questions[num][0].values[i]);
     $('#renderResponse').append('<p><label>'+
@@ -80,40 +92,69 @@ function renderResponse (num) {
       questions[num][0].response[i]+'</label></p>');
 
     }
-    $('#renderResponse').append('<input type="submit" class="form-control" id="nextQuestion">');
+    $('#renderResponse').append('<input type="submit" class="btn btn-primary btn-sm" id="nextQuestion">');
 
+  // } else {
+  //   for (var i = 0; i < questions[num][0].response.length; i++){
+  //   $('#renderResponse').append('<p><label>'+
+  //     '<input type="radio" name="optionsRadios"'+
+  //     'value="'+questions[num][0].values[i]+'">'+
+  //     questions[num][0].response[i]+'</label></p>');
+
+
+
+  // }
+
+
+  //   $('#renderResponse').append('<a id="submit-answer" class="btn btn-primary btn-sm page-scroll" href="#calculator">Submit</a>');
+  //   surveySum += parseInt($("input[name=optionsRadios]:checked").val());
+  //   $('#calculator').show();
+  //   console.log(surveySum, "survey Sum");
+
+
+
+  // }
 
 }
-
 
 
 function submitResponse (num) {
+  console.log(num, "number");
+  if(num < questions.length-1) {
+    $('#nextQuestion').on('click', function () {
+    surveySum += parseInt($("input[name=optionsRadios]:checked").val());
+    console.log(surveySum);
+    $('#renderQuestion').html('');
+    $('#renderResponse').html('');
+    renderQuestion(num+1);
+    renderResponse(num+1);
+    submitResponse(num+1);
 
-  // var questionValue = parseInt($("input[name=optionsRadios]:checked").val());
-  // console.log(questionValue);
-  $('#nextQuestion').on('click', function () {
-  surveySum += parseInt($("input[name=optionsRadios]:checked").val());
-  console.log(surveySum);
-  $('#renderQuestion').html('');
-  $('#renderResponse').html('');
-  renderQuestion(num+1);
-  renderResponse(num+1);
-  submitResponse(num+1);
+    });
+  } else {
+    $('#nextQuestion').on('click', function () {
+    surveySum += parseInt($("input[name=optionsRadios]:checked").val());
+    console.log(surveySum);
+    console.log("test test");
+     imageChoice(surveySum);
+    var recommendation = surveyScore(surveySum);
 
-  imageChoice(surveySum);
-  var recommendation = surveyScore(surveySum);
+    $('#modal-survey').html('<h3><strong>Usage Survey Results: </strong>' + recommendation + '</h3>');
+    $('#survey').hide();
+    $('#calculator').show();
 
-  $('#modal-survey').html('<h3><strong>Usage Survey Results: </strong>' + recommendation + '</h3>');
+
 
   });
+  }
 
 
 }
 
-$('#nextQuestion').on('click', function () {
+$('#submit-answer').on('click', function () {
   // $('#renderQuestion').html('');
   // $('#renderResponse').html('');
-  console.log('test');
+  console.log('test to next section');
 
 });
 
