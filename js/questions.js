@@ -60,7 +60,7 @@ $('#start').on('click', function () {
 
 
 var surveySum = 0;
-
+console.log(surveySum);
 
 
 //render question function
@@ -71,13 +71,6 @@ function renderQuestion (num) {
 function renderResponse (num) {
 
     var checked= [];
-    var values=[];
-
-  // for (var j = 0; j < questions[num][0].values.length; i++) {
-  //   values.push(questions[num][0].values[j]);
-  // }
-
-  // console.log(values);
 
   for (var i = 0; i < questions[num][0].response.length; i++) {
     // values.push(questions[num][0].values[i]);
@@ -85,7 +78,6 @@ function renderResponse (num) {
       '<input type="radio" name="optionsRadios"'+
       'value="'+questions[num][0].values[i]+'">'+
       questions[num][0].response[i]+'</label></p>');
-    // console.log(values, "values");
 
 
     // $("input[name=optionsRadios]:checked")
@@ -105,15 +97,12 @@ function renderResponse (num) {
 
 
 function submitResponse (num) {
-//   $('#nextQuestion').append('<input type="submit" class="form-control" id="nextQuestion" placeholder="Monthly Bill" >');
-// //   console.log("test");
-  // console.log(surveySum);
-  // if (('.optionsRadios').attr('checked')) {
-  //   console.log('test');
 
-  // }
-  // surveySum += $("input[name=optionsRadios]:checked").val();
+  // var questionValue = parseInt($("input[name=optionsRadios]:checked").val());
+  // console.log(questionValue);
   $('#nextQuestion').on('click', function () {
+  surveySum += parseInt($("input[name=optionsRadios]:checked").val());
+  console.log(surveySum);
   $('#renderQuestion').html('');
   $('#renderResponse').html('');
   renderQuestion(num+1);
