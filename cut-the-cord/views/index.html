@@ -1,12 +1,5 @@
-{% extends 'layout.html' %}
-
-{% block title %}{% endblock %}
-
-
-{% block content %}
-
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html ng-app="" lang="en">
 
 <head>
 
@@ -19,9 +12,8 @@
     <title>Time to Cut the Cord?</title>
     <!-- Bootstrap Core CSS -->
 
-    <link href="stylesheets
-    /bootstrap.min.css" rel="stylesheet">
-     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha256-sHwgyDk4CGNYom267UJX364ewnY4Bh55d53pxP5WDug= sha512-mkkeSf+MM3dyMWg3k9hcAttl7IVHe2BA1o/5xKLl4kBaP0bih7Mzz/DBy4y6cNZCHtE2tPgYBYH/KtEjOQYKxA==" crossorigin="anonymous">
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha256-sHwgyDk4CGNYom267UJX364ewnY4Bh55d53pxP5WDug= sha512-mkkeSf+MM3dyMWg3k9hcAttl7IVHe2BA1o/5xKLl4kBaP0bih7Mzz/DBy4y6cNZCHtE2tPgYBYH/KtEjOQYKxA==" crossorigin="anonymous">
 
     <!-- Custom CSS -->
     <link href="stylesheets/scrolling-nav.css" rel="stylesheet">
@@ -31,11 +23,10 @@
 
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav id="nav" align="center" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
-            <div class="navbar-header page-scroll">
+           <!--  <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
                 data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -43,23 +34,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"></a>
-            </div>
 
 
+            </div> -->
+
+            <h1 id="navtext" class="navbar-text">Should You Cut the Cable Cord?</h1>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
+
                 <ul class="nav navbar-nav">
 
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
-               <!--      <li>
-                        <a class="page-scroll" href="#survey">Usage Survey</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#calculator">Cost Comparison</a>
-                    </li> -->
-
                 </ul>
             </div>
 
@@ -77,6 +63,8 @@
                     <a id="start" class="btn btn-primary btn-sm page-scroll" href="#survey">Take Survey</a>
                 </div>
             </div>
+            <p>Say something to the world - <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
+    <p>{{ greeting }} world!</p>
         </div>
     </section>
 
@@ -292,12 +280,12 @@
       </div>
 
     </section>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
     <!-- jQuery -->
     <script src="javascripts/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <!-- Scrolling Nav JavaScript -->
     <script src="javascripts/jquery.easing.min.js"></script>
@@ -311,4 +299,3 @@
 </html>
 
 
-{% endblock %}

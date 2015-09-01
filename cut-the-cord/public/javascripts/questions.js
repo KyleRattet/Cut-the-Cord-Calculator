@@ -1,4 +1,6 @@
 //create questions array
+
+console.log("questions js test");
 var questions = [
   [{
     number: 1,
