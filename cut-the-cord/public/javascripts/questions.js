@@ -58,12 +58,12 @@ function renderQuestion (num) {
   if(num<=questions.length-1) {
     $('#survey').show();
     $('#usageHeader').show();
-    $('#renderQuestion').append('<h2>'+questions[num][0].number +". " + questions[num][0].question+'</h2>');
+    $('#renderQuestion').append('<h3>'+questions[num][0].number +". " + questions[num][0].question+'</h3>');
 
   } else {
     $('#survey').show();
     $('#usageHeader').show();
-    $('#renderQuestion').append('<h2>'+questions[num][0].number +". " + questions[num][0].question+'</h2>');
+    $('#renderQuestion').append('<h3>'+questions[num][0].number +". " + questions[num][0].question+'</h3>');
 
   }
 }

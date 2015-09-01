@@ -3,6 +3,9 @@ $(document).on('ready', function() {
    $('#survey').hide();
    $('#usageHeader').hide();
    $('#calculator').hide();
+   $('#cost2').hide();
+   $('#cost3').hide();
+   $('#cost4').hide();
 
 ////////////////////////
 ///Monthly Bill Input///
@@ -11,13 +14,29 @@ $(document).on('ready', function() {
    $('#monthly-cable-cost').on('change', function() {
   if ($(':button')[1].disabled === true) {
       $(':button')[1].disabled = false;
+      // $('#cost1').hide();
+      // $('#cost2').show();
   }
 });
 });
 
 
+$('#monthly-cable-submit').on('click', function(event) {
 
+  event.preventDefault();
+      $('#cost1').hide();
+      $('#cost2').show();
 
+});
+
+$('#monthly-internet-submit').on('click', function(event) {
+
+  event.preventDefault();
+      $('#cost2').hide();
+      $('#cost3').show();
+      $('#cost4').show();
+
+});
 
 ///////////////////////
 ///On Submit Button ///
@@ -110,6 +129,10 @@ $('#reset').on('click', function() {
    $('#usageHeader').hide();
    $('#calculator').hide();
    $('#intro').show();
+   $('#cost1').show();
+   $('#cost2').hide();
+   $('#cost3').hide();
+   $('#cost4').hide();
 
 });
 
